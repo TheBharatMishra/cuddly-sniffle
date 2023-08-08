@@ -7,8 +7,8 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-	user: 'mysql',
-	host: 'localhost',
+	user: 'root',
+	host: '127.0.0.1',
 	password: 'bhanu don',
 	database: 'userLooser'
 });
@@ -31,7 +31,7 @@ app.post('/create', (req, res) => {
 	);
 });
 
-app.use('/', (req, res) => res.send());
+app.use('/', (req, res) => res.send('Wassup'));
 app.listen(6969, () => {
 	console.log('Yo mr white');
 });

@@ -10,15 +10,17 @@ function App() {
 	const [position, setPosition] = useState('');
 	const [wage, setWage] = useState(0);
 	const addHooman = () => {
+		console.log(name);
 		axios
-			.post('https://localhost:6969/create', {
+			.post('https://127.0.0.1:6969/create', {
 				name: name,
 				age: age,
 				country: country,
 				position: position,
 				wage: wage
 			})
-			.then(() => console.log('Success'));
+			.then(() => console.log('Success'))
+			.catch((error) => console.log(error));
 	};
 
 	return (
